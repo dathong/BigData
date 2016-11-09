@@ -49,4 +49,5 @@ for c in range(1, 100):
     np.savetxt("./big_data_files/x" + gen(c) + ".csv", l, fmt='%s', delimiter=' ', newline='\n', )
     np.savetxt("./big_data_files/y" + gen(c) + ".csv", l1, fmt='%s', delimiter=' ', newline='\n', )
 
+
 print("Done")
