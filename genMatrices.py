@@ -19,6 +19,8 @@ for c in range(1, 100):
     height, width, d = img1.shape
 
     k = 3
+    l = []
+    l1 = []
 
     Y = np.empty([height, width], dtype=object)
 
@@ -39,13 +41,9 @@ for c in range(1, 100):
                 Y[h, w] = (X, 0)
             else:
                 Y[h, w] = (X, 1)
-
-    l = []
-    l1 = []
-    for h in range(height):
-        for w in range(width):
-            l.append(Y[h, w][0].flatten())
+            l.append(X.flatten())
             l1.append(Y[h, w][1])
+
 
     print("for c = " + str(c) + " saving files ....")
     np.savetxt("./big_data_files/x" + gen(c) + ".csv", l, fmt='%s', delimiter=' ', newline='\n', )
